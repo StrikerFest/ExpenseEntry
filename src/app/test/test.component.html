@@ -4,3 +4,7 @@
 <h2>Event binding</h2>
 <button (click)="showData($event)">Click here</button>
 <button on-click="showData($event)">Click here 2</button>
+<h2>Property binding</h2>
+Name: <input [value]="userName">
+Name2: <input value={{userName2}}>
+

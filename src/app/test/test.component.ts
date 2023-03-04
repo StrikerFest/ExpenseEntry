@@ -14,6 +14,9 @@ export class TestComponent implements OnInit {
       console.log("$event.target.value " ,$event.target.value);
     }
   }
+
+  userName: string = "Ace";
+  userName2: string = "Ace";
   constructor() {}
 
   ngOnInit(): void {}
