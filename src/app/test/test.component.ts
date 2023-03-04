@@ -7,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
   testString = 'String interpolation';
+  userName: string = "Ace";
+  userName2: string = "Ace";
   showData($event: any) {
     console.log('button is clicked!');
     if ($event) {
       console.log("$event.target " ,$event.target);
-      console.log("$event.target.value " ,$event.target.value);
+      console.log("$event.target.value ", $event.target.value);
+      this.userName2 = "dude";
+      this.userName = "hey";
     }
   }
 
-  userName: string = "Ace";
-  userName2: string = "Ace";
+  columnSpan: number = 2;
+
   constructor() {}
 
   ngOnInit(): void {}
