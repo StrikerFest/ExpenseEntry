@@ -1,20 +1,32 @@
-<h1>Test</h1>
-<h2>String interpolation</h2>
-{{testString}}
-<h2>Event binding</h2>
-<button (click)="showData($event)">Click here</button>
-<button on-click="showData($event)">Click here 2</button>
-<h2>Property binding</h2>
-Name: <input [value]="userName">
-Name2: <input value={{userName2}}>
-
-<table border="1">
-  <tr>
-    <td>1</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td [attr.colspan]="columnSpan">3</td>
-  </tr>
-</table>
-
+<div class="p-1">
+  <h1>Test</h1>
+</div>
+<hr />
+<div class="p-1">
+  <h2>String interpolation</h2>
+  {{ testString }}
+</div>
+<hr />
+<div class="p-1">
+  <h2>Event binding</h2>
+  <button (click)="showData($event)">Click here</button>
+  <button on-click="howData($event)">Click here 2</button>
+  <hr />
+</div>
+<div class="p-1">
+  <h2>Property binding</h2>
+  Name: <input [value]="userName" /> Name2: <input value="{{ userName2 }}" />
+  <hr />
+</div>
+<div class="p-1">
+  <table border="1">
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td [attr.colspan]="columnSpan">3</td>
+    </tr>
+  </table>
+  <hr>
+</div>
