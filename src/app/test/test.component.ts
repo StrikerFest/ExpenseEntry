@@ -58,6 +58,8 @@ export class TestComponent implements OnInit {
   trackByData1(index: number, studentArr: any): number {
     return studentArr.id;
   }
+
+  ngSwitchLogInName = "admin";
   constructor() {}
 
   ngOnInit(): void {}

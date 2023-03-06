@@ -66,37 +66,39 @@
   <div *ngIf="true">Display if ngIf = true</div>
   <div *ngIf="false">Display if ngIf = true</div>
 </div>
-<hr>
+<hr />
 <!-- NgIfELse -->
 <div>
   <h2>NgIfElse</h2>
-  <div *ngIf="ngIfElseIsLogIn;else templateId">
-    Logged in
-  </div>
-  <ng-template #templateId>
-    Logged out
-  </ng-template>
+  <div *ngIf="ngIfElseIsLogIn; else templateId">Logged in</div>
+  <ng-template #templateId> Logged out </ng-template>
 </div>
-<hr>
+<hr />
 
 <!-- ngFor -->
 <div>
   <h2>ngFor</h2>
   <ul>
     <li *ngFor="let item of list">
-      {{item}}
+      {{ item }}
     </li>
   </ul>
 </div>
-<hr>
+<hr />
 <!-- ngFor but big - trackBy -->
 <div>
-  <h2>
-    ngFor but big - trackBy
-  </h2>
+  <h2>ngFor but big - trackBy</h2>
   <ul>
     <li *ngFor="let std of studentArr; trackBy: trackByData1">
-      {{std.name}}
+      {{ std.name }}
     </li>
   </ul>
 </div>
+
+<hr />
+<!-- ngSwitch -->
+<ul [ngSwitch]="ngSwitchLogInName">
+  <div *ngSwitchCase="'user'">User login</div>
+  <div *ngSwitchCase="'admin'">admin login</div>
+  <div *ngSwitchDefault>Default login</div>
+</ul>
