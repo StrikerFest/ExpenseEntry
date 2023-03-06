@@ -24,7 +24,7 @@ export class TestComponent implements OnInit {
   colorRed: string = "red";
   applyCSSClass: boolean = false;
 
-
+  styleBinding: string = "red";
   constructor() {}
 
   ngOnInit(): void {}
