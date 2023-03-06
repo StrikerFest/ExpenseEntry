@@ -1,24 +1,30 @@
+<!-- Title -->
 <div class="p-1">
   <h1>Test</h1>
 </div>
 <hr />
+<!-- String interpolation -->
 <div class="p-1">
   <h2>String interpolation</h2>
   {{ testString }}
 </div>
 <hr />
+<!-- Event binding -->
 <div class="p-1">
   <h2>Event binding</h2>
   <button (click)="showData($event)">Click here</button>
   <button on-click="howData($event)">Click here 2</button>
-  <hr />
 </div>
+<hr />
+<!-- Property binding -->
 <div class="p-1">
   <h2>Property binding</h2>
   Name: <input [value]="userName" /> Name2: <input value="{{ userName2 }}" />
-  <hr />
 </div>
+<hr />
+<!-- Attribute binding -->
 <div class="p-1">
+  <h2>Attribute binding binding</h2>
   <table border="1">
     <tr>
       <td>1</td>
@@ -28,8 +34,9 @@
       <td [attr.colspan]="columnSpan">3</td>
     </tr>
   </table>
-  <hr>
 </div>
+<hr>
+<!-- Class binding -->
 <div class="p-1">
   <h2 [class]="colorRed">Class binding</h2>
   <h3 [class.blue]="applyCSSClass">Unaffected</h3>
