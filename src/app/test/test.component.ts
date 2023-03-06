@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgClassUser as User} from '../ng-class-user';
 
 @Component({
   selector: 'app-test',
@@ -62,6 +63,20 @@ export class TestComponent implements OnInit {
   ngSwitchLogInName = "admin";
 
   ngStyleBlue = "blue";
+
+  users: User[] = [
+    {
+      "userId": 1,
+      "userName": 'User1'
+    },
+    {
+      "userId": 2,
+      "userName": 'User2'
+    },{
+      "userId": 3,
+      "userName": 'User3'
+    }
+  ]
   constructor() {}
 
   ngOnInit(): void {}

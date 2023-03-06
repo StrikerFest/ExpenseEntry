@@ -117,3 +117,15 @@
     Paragraph style is applied with ngStyle
   </p>
 </div>
+
+<hr>
+
+<!-- ngClass -->
+<div >
+  <br>
+  <div *ngFor="let user of users" [ngClass]="{'highlight': user.userName === 'User1'}">
+    {{user.userName}}
+
+  </div>
+
+</div>
