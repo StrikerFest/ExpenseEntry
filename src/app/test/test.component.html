@@ -78,3 +78,25 @@
   </ng-template>
 </div>
 <hr>
+
+<!-- ngFor -->
+<div>
+  <h2>ngFor</h2>
+  <ul>
+    <li *ngFor="let item of list">
+      {{item}}
+    </li>
+  </ul>
+</div>
+<hr>
+<!-- ngFor but big - trackBy -->
+<div>
+  <h2>
+    ngFor but big - trackBy
+  </h2>
+  <ul>
+    <li *ngFor="let std of studentArr; trackBy: trackByData1">
+      {{std.name}}
+    </li>
+  </ul>
+</div>
