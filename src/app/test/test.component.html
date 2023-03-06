@@ -55,9 +55,9 @@
   <p>Two-way binding! Hello {{ userName2Way }}!</p>
 </div>
 <hr />
-<!-- Attribute directives -->
+<!-- Structural directives -->
 <div>
-  <h1>Attribute directives</h1>
+  <h1>Structural directives</h1>
 </div>
 <hr />
 <!-- NgIf -->
@@ -102,3 +102,18 @@
   <div *ngSwitchCase="'admin'">admin login</div>
   <div *ngSwitchDefault>Default login</div>
 </ul>
+<hr>
+
+<!-- Attribute directive -->
+<div>
+  <h1>Attribute directives</h1>
+</div>
+<hr>
+
+<!-- ngStyle -->
+<div>
+  <h2>ngStyle</h2>
+  <p [ngStyle]="{'color': ngStyleBlue,'font-weight': 'bold'}">
+    Paragraph style is applied with ngStyle
+  </p>
+</div>

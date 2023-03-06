@@ -60,6 +60,8 @@ export class TestComponent implements OnInit {
   }
 
   ngSwitchLogInName = "admin";
+
+  ngStyleBlue = "blue";
   constructor() {}
 
   ngOnInit(): void {}
