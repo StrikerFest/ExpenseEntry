@@ -21,6 +21,10 @@ export class TestComponent implements OnInit {
 
   columnSpan: number = 2;
 
+  colorRed: string = "red";
+  applyCSSClass: boolean = false;
+
+
   constructor() {}
 
   ngOnInit(): void {}
