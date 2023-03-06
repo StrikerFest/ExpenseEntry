@@ -26,7 +26,11 @@ export class TestComponent implements OnInit {
 
   styleBinding: string = "red";
 
-  
+  // Directive
+
+  ngIfElseIfLogIn: boolean = false;
+  ngIfElseIfLogOut: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -47,10 +47,34 @@
   <h2>Style binding</h2>
   <p [style.color]="styleBinding">This is red</p>
 </div>
-<hr>
+<hr />
 <!-- Two-way data binding -->
 <div>
   <h2>Two-way data binding</h2>
-  <input type="text" [(ngModel)]="userName2Way">
-  <p>Two-way binding! Hello {{userName2Way}}!</p>
+  <input type="text" [(ngModel)]="userName2Way" />
+  <p>Two-way binding! Hello {{ userName2Way }}!</p>
 </div>
+<hr />
+<!-- Attribute directives -->
+<div>
+  <h1>Attribute directives</h1>
+</div>
+<hr />
+<!-- NgIf -->
+<div>
+  <h2>NgIf</h2>
+  <div *ngIf="true">Display if ngIf = true</div>
+  <div *ngIf="false">Display if ngIf = true</div>
+</div>
+<hr>
+<!-- NgIfELse -->
+<div>
+  <h2>NgIfElse</h2>
+  <div *ngIf="ngIfElseIsLogIn;else templateId">
+    Logged in
+  </div>
+  <ng-template #templateId>
+    Logged out
+  </ng-template>
+</div>
+<hr>
