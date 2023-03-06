@@ -47,3 +47,10 @@
   <h2>Style binding</h2>
   <p [style.color]="styleBinding">This is red</p>
 </div>
+<hr>
+<!-- Two-way data binding -->
+<div>
+  <h2>Two-way data binding</h2>
+  <input type="text" [(ngModel)]="userName2Way">
+  <p>Two-way binding! Hello {{userName2Way}}!</p>
+</div>
