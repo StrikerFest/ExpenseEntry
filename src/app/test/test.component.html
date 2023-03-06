@@ -47,10 +47,85 @@
   <h2>Style binding</h2>
   <p [style.color]="styleBinding">This is red</p>
 </div>
-<hr>
+<hr />
 <!-- Two-way data binding -->
 <div>
   <h2>Two-way data binding</h2>
-  <input type="text" [(ngModel)]="userName2Way">
-  <p>Two-way binding! Hello {{userName2Way}}!</p>
+  <input type="text" [(ngModel)]="userName2Way" />
+  <p>Two-way binding! Hello {{ userName2Way }}!</p>
+</div>
+<hr />
+<!-- Structural directives -->
+<div>
+  <h1>Structural directives</h1>
+</div>
+<hr />
+<!-- NgIf -->
+<div>
+  <h2>NgIf</h2>
+  <div *ngIf="true">Display if ngIf = true</div>
+  <div *ngIf="false">Display if ngIf = true</div>
+</div>
+<hr />
+<!-- NgIfELse -->
+<div>
+  <h2>NgIfElse</h2>
+  <div *ngIf="ngIfElseIsLogIn; else templateId">Logged in</div>
+  <ng-template #templateId> Logged out </ng-template>
+</div>
+<hr />
+
+<!-- ngFor -->
+<div>
+  <h2>ngFor</h2>
+  <ul>
+    <li *ngFor="let item of list">
+      {{ item }}
+    </li>
+  </ul>
+</div>
+<hr />
+<!-- ngFor but big - trackBy -->
+<div>
+  <h2>ngFor but big - trackBy</h2>
+  <ul>
+    <li *ngFor="let std of studentArr; trackBy: trackByData1">
+      {{ std.name }}
+    </li>
+  </ul>
+</div>
+
+<hr />
+<!-- ngSwitch -->
+<ul [ngSwitch]="ngSwitchLogInName">
+  <div *ngSwitchCase="'user'">User login</div>
+  <div *ngSwitchCase="'admin'">admin login</div>
+  <div *ngSwitchDefault>Default login</div>
+</ul>
+<hr>
+
+<!-- Attribute directive -->
+<div>
+  <h1>Attribute directives</h1>
+</div>
+<hr>
+
+<!-- ngStyle -->
+<div>
+  <h2>ngStyle</h2>
+  <p [ngStyle]="{'color': ngStyleBlue,'font-weight': 'bold'}">
+    Paragraph style is applied with ngStyle
+  </p>
+</div>
+
+<hr>
+
+<!-- ngClass -->
+<div >
+  <br>
+  <div *ngFor="let user of users" [ngClass]="{'highlight': user.userName === 'User1'}">
+    {{user.userName}}
+
+  </div>
+
 </div>
